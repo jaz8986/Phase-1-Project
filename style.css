@@ -1,104 +1,92 @@
 body {
-     background: black;
-     padding-left: 20px;
-     padding-right: 20px;
+    background: black;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-
 #header {
-    text-align: center;
-    font-family: monospace;
-    font-size: 60px;
-    background-color: white;
+   text-align: center;
+   font-family: monospace;
+   font-size: 60px;
+   background-color: white;
 }
-
 #current-city {
-    text-align: center;
-    font-size: 25px;
-    font-family: monospace;
-    background-color: bisque;
-
-}
-
-#grid-container {
-    display: grid;
-    
-}
-
-#left {
+   text-align: center;
+   font-size: 25px;
+   font-family: monospace;
    background-color: bisque;
-   padding: 10px;
-   grid-row-start: 1;   
+}
+#grid-container {
+   display: grid;
+   
+}
+#left {
+  background-color: bisque;
+  padding: 10px;
+  grid-row-start: 1;   
+  grid-row-end: 4;
+  grid-column-start: 3; 
+  grid-column-end: 4;
+  color: black;
+  font-family: monospace;
+  line-height: 70px;
+  font-size: 20px;
+  text-align: right;
+}
+#center {
+   margin: 10px;
+   grid-row-start: 1;
    grid-row-end: 4;
-   grid-column-start: 3; 
-   grid-column-end: 4;
+   text-align: center;
+   color: white;
+   font-family: monospace;
+   line-height: 55px;
+   font-size: 25px;
+}
+h4 {
+   font-size: small;
+}
+h5 {
+   font-weight: 1000;
+}
+#right {
+   background-color: rgb(176, 201, 228);
+   padding: 10px;
+   grid-row-start: 1;
+   grid-row-end: 4;
+   grid-column-start: 1;
+   grid-column-end: 2;
+   text-align: left;
    color: black;
    font-family: monospace;
-   line-height: 70px;
-   font-size: 20px;
-   text-align: right;
+   line-height: 50px;
 }
-
-#center {
-    margin: 10px;
-    grid-row-start: 1;
-    grid-row-end: 4;
-    text-align: center;
-    color: white;
-    font-family: monospace;
-    line-height: 55px;
-    font-size: 25px;
-}
-
-h4 {
-    font-size: small;
-}
-
-#right {
-    background-color: rgb(176, 201, 228);
-    padding: 10px;
-    grid-row-start: 1;
-    grid-row-end: 4;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    text-align: left;
-    color: black;
-    font-family: monospace;
-    line-height: 50px;
-}
-
-/* scroll box */
-#city-search  {
-    text-align: left;
-    background-color: white;
-    color: black;
-    width: 300px;
-    height: 80px;
-    padding: 5px;
-    overflow-x: scroll;
-    overflow-y: auto;
-}
-
-ul {
-    text-align: left;
-    background-color: white;
-    color: black;
-    width: 300px;
-    height: 80px;
-    padding: 5px;
-    overflow-x: scroll;
-    overflow-y: auto;
+/* box */
+.container  {
+   text-align: left;
+   background-color: white;
+   color: black;
+   width: 300px;
+   height: 80px;
+   padding: 5px;
+   overflow-x: scroll;
+   overflow-y: auto;
+   line-height: 20px;
 }
 
 #city-comment {
-    line-height: 20px;
-    text-align: left;
+   line-height: 20px;
 }
-
+ul {
+   text-align: left;
+   background-color: white;
+   color: black;
+   width: 300px;
+   height: 80px;
+   padding: 5px;
+   overflow-x: scroll;
+   overflow-y: auto;
+}
 #left {
-    font-size: 20px;
-    text-align: right;
-}
-
-li {
-    line-height: 12px;
+   font-size: 20px;
+   text-align: right;
 }
