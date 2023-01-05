@@ -66,7 +66,7 @@ h4 {
     line-height: 50px;
 }
 
-/* box */
+/* scroll box */
 #city-search  {
     text-align: left;
     background-color: white;
@@ -97,4 +97,8 @@ ul {
 #left {
     font-size: 20px;
     text-align: right;
+}
+
+li {
+    line-height: 12px;
 }

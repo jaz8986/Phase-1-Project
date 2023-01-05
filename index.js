@@ -24,6 +24,8 @@ const currentCity = document.querySelector('#forecast');
 const threeDayForecast = document.querySelector('#threedayforecast');
 const catMood = document.querySelector('#cat-pictures');
 const catImg = document.querySelector('#cat-image');
+const commentForm = document.querySelector("#city-comment");
+const commentContainer = document.querySelector('#new-comment-container');
 // const openCityForm = document.querySelector('');
 // const cityForm = document.querySelector('');
 // const commentsForm = document.querySelector('');
@@ -97,6 +99,7 @@ function convKmhtoMph(kmh) {
 }
 
 // Event Listeners
+commentForm.addEventListener('submit', renderComments);
 // openCityForm.addEventListener('click', cycleCatPics);
 // cityForm.addEventListener('submit', cycleCatPics);
 // commentsForm.addEventListener('submit', cycleCatPics);
@@ -128,10 +131,20 @@ function cycleCatPics(catArray) {
     })
 }
 
-// Initializers
+function renderComments (e) {
+    e.preventDefault();
+    const li = document.createElement('li');
+    let comment = e.target['new-comment'].value
+    let name = e.target['new-name'].value 
+    li.textContent = `${name} said \"${comment}\"`
+    commentContainer.appendChild(li)
+    commentForm.reset()
+}
+
+// // Initializers
 getOneCityData(testUrl, '').then(data => {
-// getOneCityData(baseUrl, 'New York').then(data => {
-    // console.log(data);
+// // // getOneCityData(baseUrl, 'New York').then(data => {
+// //     // console.log(data);
     renderCityData(data);
     renderForecast(data.forecast);
 });
