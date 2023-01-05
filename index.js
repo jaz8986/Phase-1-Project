@@ -142,12 +142,33 @@ function renderComments (e) {
 }
 
 // // Initializers
-getOneCityData(testUrl, '').then(data => {
+// getOneCityData(testUrl, '').then(data => {
 // // // getOneCityData(baseUrl, 'New York').then(data => {
 // //     // console.log(data);
-    renderCityData(data);
-    renderForecast(data.forecast);
-});
+//     renderCityData(data);
+//     renderForecast(data.forecast);
+// });
+
+function gettingWeather () {
+    fetch(baseUrl).then((response) => {
+            getWeather(response)
+        }
+    )}
+        
+function getWeather (response) {
+        if (response.ok === true) {
+            getOneCityData(baseUrl, 'New York').then(data => {
+            renderCityData(data);
+            renderForecast(data.forecast)});
+        } else if (response.ok === false) {
+            getOneCityData(testUrl, '').then(data => {
+                renderCityData(data);
+                renderForecast(data.forecast);
+            });
+        }
+    }
+
+gettingWeather()
 
 // add if statement for heroku response
 // response.ok true or false
